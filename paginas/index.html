@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dados RPG</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+	<!-- font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&family=Lora&display=swap"
+		rel="stylesheet">
+
+
+	<!-- impotrando css bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<!-- importando JavaScript bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
+
+
+	<style>
+		body {
+			align-items: center;
+			background-color: rgb(31, 30, 30);
+			font-family: 'IM Fell Double Pica SC', serif;
+		}
+
+		#div_dados {
+			justify-content: space-around;
+			align-content: center;
+			border-radius: 15px;
+			background: #ffffff1a;
+			box-shadow: inset 8px -8px 6px #b2adad, inset -8px 8px 6px #ffffff;
+			height: 300px;
+		}
+
+		#button {
+			border-style: none;
+			font-size: 1.5rem;
+			color: aliceblue;
+			background: rgba(147, 255, 45, 0.144);
+			border-radius: 10px;
+			padding: 20px;
+			text-align: center;
+		}
+
+		#button:hover {
+			color: rgb(223, 0, 0);
+			background: rgba(71, 0, 0, 0.288);
+		}
+
+		p {
+			background: #03030362;
+			border-radius: 15px;
+			text-align: center;
+			font-size: xx-large;
+			color: rgb(255, 244, 255);
+		}
+
+		#dice div {
+			justify-content: space-between;
+			align-content: center;
+			margin-top: 20px;
+		}
+
+		h1 {
+			border-style: solid;
+			border-color: #746d6d23;
+			color: rgb(255, 255, 255);
+			text-align: center;
+			justify-items: center;
+			width: 500px;
+			border-radius: 15px;
+			background: linear-gradient(145deg, #8a818180, #746d6d80);
+			box-shadow: 8px 8px 6px #666060a4;
+		}
+
+		button {
+			justify-content: space-between;
+		}
+	</style>
+	<script>
+
+		function d4() {
+			document.getElementById("resultadoD4").innerHTML = Math.floor(Math.random() * 4) + 1;
+		}
+		function d10() {
+			document.getElementById("resultadoD10").innerHTML = Math.floor(Math.random() * 10) + 1;
+		}
+		function d20() {
+			document.getElementById("resultadoD20").innerHTML = Math.floor(Math.random() * 21);
+		}
+
+	</script>
+</head>
+
+<body>
+	<div class="container" id="dice">
+
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h1>Dados</h1>
+			</div>
+			<div class="col-md-3"></div>
+			<div class="row">
+				<div class="col-md-3" id="div_dados">
+					<div class="col-sm-12">
+						<p>D4</p>
+					</div>
+					<div class="row">
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6">
+							<button id="button" onclick="d4()">Rodar D4</button>
+						</div>
+						<div class="col-sm-3"></div>
+					</div>
+					<div class="col-sm-12">
+						<p class="resultado" id="resultadoD4"></p>
+					</div>
+				</div>
+
+				<div class="col-md-3" id="div_dados">
+					<div class="col-sm-12">
+						<p>D10</p>
+					</div>
+					<div class="row">
+						<div class="col-sm-3"></div>
+						<div class="col-md-6">
+							<button id="button" onclick="d10()">Rodar<br>D10</button>
+						</div>
+						<div class="col-sm-3"></div>
+					</div>
+					<div class="col-sm-12">
+						<p class="resultado" id="resultadoD10"></p>
+					</div>
+				</div>
+
+				<div class="col-md-3" id="div_dados">
+					<div class="col-md-12">
+						<p>D20</p>
+					</div>
+					<div class="row">
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6">
+							<button id="button" onclick="d20()">Rodar D20</button>
+						</div>
+						<div class="col-sm-3"></div>
+					</div>
+					<div class="col-sm-12">
+						<p class="resltado" id="resultadoD20"> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- container-->
+</body>
+
+</html>
